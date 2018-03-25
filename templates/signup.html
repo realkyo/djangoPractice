@@ -5,13 +5,14 @@
     <!-- Example row of columns -->
     <div class="row">
         <h1>註冊</h1>
-        <form action="">
+        <form method="POST" action="/signup/post">
             <label for="">請輸入使用者名稱</label>
-            <input type="text" class="form-control">
+            <input type="text" name="username" class="form-control">
             <label for="">請輸入使用者 email</label>
-            <input type="text" class="form-control">
+            <input type="text" name="email" class="form-control">
             <label for="">請輸入密碼</label>
-            <input type="text" class="form-control">
+            <input type="password" name="password" class="form-control">
+            {% csrf_token %}
             <button class="btn btn-primary btn-block">提交送出</button>
         </form>
     </div>
